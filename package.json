@@ -1,5 +1,6 @@
 {
   "name": "react-test",
+  "homepage": "https://pablotorrubiano.xyz/react-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

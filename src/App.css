@@ -28,6 +28,7 @@
   color: #61dafb;
 }
 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +36,86 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+height, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: Gainsboro;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+h1::first-letter,
+h2::first-letter,
+.post::first-letter {
+  text-transform: uppercase;
+}
+
+.header-content {
+  padding-left: 2em;
+  color: white;
+}
+
+#form {
+  padding-bottom: 1em;
+}
+
+#form-bar {
+  width: 40em;
+}
+
+#input-button {
+  margin-left: 2em;
+}
+
+.post {
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 3px 3px 10px 3px #888888;
+  margin: 20px 0 20px;
+  padding: 15px 20px 15px;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #282828;
+}
+
+.fb__1_2-header {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  min-width: 50em;
+  background-color: #4B89DC;
+
+}
+
+.fb__2_5-title {
+  flex-grow: 1;
+}
+
+.fb__1_3-main {
+  flex-grow: 1;
+  padding: 0 20px 0;
+}
+
+.fb__1_2-header {
+  width: 80%;
+  max-width: 1200px;
+}
+
+.fb__1_3-main {
+  width: 70%;
+  max-width: 1050px;
 }
