@@ -3,6 +3,45 @@ import { useInput } from './hooks/input-hook.js';
 import logo from './logo.svg';
 import './App.css';
 
+class Post extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: this.props.post.id,
+      userId: this.props.post.userId,
+      title: this.props.post.title,
+      body: this.props.post.body,
+      contentVisible: false
+      };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    this.setState({contentVisible: !this.state.contentVisible });
+  }
+
+  render() {
+    if (this.state.contentVisible){
+      return (
+        <div class="post" key={this.state.id} onClick={this.handleClick}>
+          {this.state.title}
+          <div class="post__content">
+            {this.state.body}
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div class="post" key={this.state.id} onClick={this.handleClick}>
+          {this.state.title}
+        </div>
+      );
+    }
+  }
+}
+
 function App() {
   const { value, bind, reset } = useInput('');
 
@@ -77,10 +116,8 @@ function App() {
         {header}
 
         <div class="fb fb__1_3-main" id="app" >
-          {items.map(post => (
-            <div class="post" key={post.id}>
-              {post.title}
-            </div>
+          {items.map(newPost => (
+            <Post post = {newPost}/>
           ))}
         </div>
       </div>
